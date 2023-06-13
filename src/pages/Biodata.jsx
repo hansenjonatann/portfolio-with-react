@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import BiodataCard from '../components/BiodataCard'
 import {FiUser, FiHome , FiPhone , FiMail, FiLinkedin, FiMap , FiWifi, FiChevronRight} from 'react-icons/fi'
 import dataBio from '../constant/dataBio'
+import ModalMenu from '../components/ModalMenu'
 
 
 const handleIcon = (name) => {
@@ -48,9 +49,9 @@ export default function Biodata() {
                     <BiodataCard key={item.id} label={item.label} value={item.value} icons={item.icons && handleIcon(item.icons)} link={item.link} />
                 )
             })}
-                
-               
             </div>
+
+            <ModalMenu/>
         </div>
     )
 }
